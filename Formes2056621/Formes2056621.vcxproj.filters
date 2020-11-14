@@ -15,15 +15,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Fonctionss2056621.h">
+    <ClInclude Include="Fonctions2056621.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Main2056621.cpp">
+    <ClCompile Include="Fonctions2056621.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Fonctionss2056621.cpp">
+    <ClCompile Include="Main2056621.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>

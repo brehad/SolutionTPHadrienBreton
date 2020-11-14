@@ -5,7 +5,7 @@ void afficherMenu1();
 
 void afficherMenu2();
 
-validerMenu
+int validerMenu(int choixMenu, int nbOptions);
 
 traiterRectangle
 
