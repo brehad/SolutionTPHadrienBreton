@@ -13,7 +13,7 @@ void traiterCarre(int choixRemplissage);
 
 void traiterTriangle(int choixRemplissage);
 
-traiterLosange;
+void traiterLosange(int choixRemplissage);
 
 void dessinerRectangle(int choixRemplissage, int hauteur, int largeur);
 
@@ -25,6 +25,6 @@ void dessinerTriangle3(int choixRemplissage, int hauteur);
 
 void dessinerTriangle4(int choixRemplissage, int hauteur);
 
-dessinerLosange;
+void dessinerLosange(int choixRemplissage, int hauteur);
 
 int genererNombreAleatoire(int min, int max);

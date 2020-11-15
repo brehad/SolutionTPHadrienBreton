@@ -128,15 +128,46 @@ void traiterTriangle(int choixRemplissage)
 		dessinerTriangle1(choixRemplissage, hauteur);
 		break;
 	case 2:
-		dessinerTriangle2();
+		dessinerTriangle2(choixRemplissage, hauteur);
 		break;
 	case 3:
-		dessinerTriangle3();
+		dessinerTriangle3(choixRemplissage, hauteur);
 		break;
 	case 4:
-		dessinerTriangle4();
+		dessinerTriangle4(choixRemplissage, hauteur);
 		break;
 	}
+
+	system("pause");
+	system("cls");
+
+}
+
+void traiterLosange(int choixRemplissage)
+{
+	int hauteur;
+
+	cout << "Veuillez entrer la hauteur du losange. La hauteur du losange doit être un nombre impair:\n";
+	cin >> hauteur;
+
+	while (hauteur % 2 != 0)
+	{
+		cout << "Erreur: le nombre entré n'est pas un nombre impair.\n\n";
+
+		cout << "Veuillez entrer la hauteur du losange. La hauteur du losange doit être un nombre impair:\n";
+		cin >> hauteur;
+	}
+
+	if (choixRemplissage == 1)
+	{
+		cout << "Voici votre losange plein de hauteur " << hauteur << ":\n";
+	}
+	if (choixRemplissage == 2)
+	{
+		cout << "Voici votre losange vide de hauteur " << hauteur << ":\n";
+	}
+
+	dessinerLosange(choixRemplissage, hauteur);
 
 	system("pause");
 	system("cls");
@@ -268,7 +299,7 @@ void dessinerTriangle3(int choixRemplissage, int hauteur)
 	{
 		while (i >= 1)
 		{
-			cout << (hauteur - i) * vide;
+			cout << (hauteur - i) * vide << endl;
 			if (i <= 2 || i == hauteur)
 			{
 				cout << i * contour << endl;
@@ -285,7 +316,7 @@ void dessinerTriangle3(int choixRemplissage, int hauteur)
 	{
 		while (i >= 1)
 		{
-			cout << (hauteur - i) * vide;
+			cout << (hauteur - i) * vide << endl;
 			if (i <= 2 || i == hauteur)
 			{
 				cout << i * contour << endl;
@@ -311,7 +342,7 @@ void dessinerTriangle4(int choixRemplissage, int hauteur)
 	{
 		while (i <= hauteur)
 		{
-			cout << (hauteur - i) * vide;
+			cout << (hauteur - i) * vide << endl;
 			if (i <= 2 || i == hauteur)
 			{
 				cout << i * contour << endl;
@@ -328,7 +359,7 @@ void dessinerTriangle4(int choixRemplissage, int hauteur)
 	{
 		while (i <= hauteur)
 		{
-			cout << (hauteur - i) * vide;
+			cout << (hauteur - i) * vide << endl;
 			if (i <= 2 || i == hauteur)
 			{
 				cout << i * contour << endl;
@@ -338,6 +369,84 @@ void dessinerTriangle4(int choixRemplissage, int hauteur)
 				cout << contour << (i - 2) * vide << contour << endl;
 			}
 			i++;
+		}
+	}
+}
+
+void dessinerLosange(int choixRemplissage, int hauteur)
+{
+	char contour = '*';
+	char remplissage = '#';
+	char vide = ' ';
+	int i = hauteur;
+	int compteur = 1;
+	int largeur = 1;
+
+	if (choixRemplissage == 1)
+	{
+		while (i >= 1)
+		{
+			cout << ((i - compteur) / 2) * vide << endl;
+
+			cout << contour;
+			if (largeur < 2)
+			{
+				cout << (largeur - 2) * remplissage;
+			}
+			cout << contour;
+
+
+	
+			if (compteur > ((hauteur - 1) / 2))
+			{
+				compteur--;
+			}
+			if (compteur <= ((hauteur - 1) / 2))
+			{
+				compteur++;
+			}
+			if (largeur > ((hauteur - 1) / 2))
+			{
+				largeur = largeur - 2;
+			}
+			if (largeur <= ((hauteur - 1) / 2))
+			{
+				largeur = largeur + 2;
+			}
+		}
+	}
+
+	if (choixRemplissage == 2)
+	{
+		while (i >= 1)
+		{
+			cout << ((i - compteur) / 2) * vide << endl;
+
+			cout << contour;
+			if (largeur < 2)
+			{
+				cout << (largeur - 2) * remplissage;
+			}
+			cout << contour;
+
+
+
+			if (compteur > ((hauteur - 1) / 2))
+			{
+				compteur--;
+			}
+			if (compteur <= ((hauteur - 1) / 2))
+			{
+				compteur++;
+			}
+			if (largeur > ((hauteur - 1) / 2))
+			{
+				largeur = largeur - 2;
+			}
+			if (largeur <= ((hauteur - 1) / 2))
+			{
+				largeur = largeur + 2;
+			}
 		}
 	}
 }
