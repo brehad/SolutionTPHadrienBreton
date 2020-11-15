@@ -7,15 +7,15 @@ void afficherMenu2();
 
 int validerMenu(int choixMenu, int nbOptions);
 
-traiterRectangle
+void traiterRectangle(int choixRemplissage);
 
-traiterCarre
+void traiterCarre(int choixRemplissage);
 
-traiterTriangle
+traiterTriangle;
 
-traiterLosange
+traiterLosange;
 
-dessinerRectangle
+void dessinerRectangle(int choixRemplissage, int hauteur, int largeur);
 
 dessinerTriangle1
 

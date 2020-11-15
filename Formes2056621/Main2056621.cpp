@@ -27,7 +27,6 @@ int main()
 	setlocale(LC_ALL,"");            // Permet de gérer les caractères accentués
 
    // Afficher le menu des formes et lire un choix valide 
-	afficherMenu1();
 	choixForme = validerMenu(1 /* choix du menu des formes */, QUITTER /* Nombres d'options au menu */);
 	
    // Tant que l'utilisateur ne veut pas quitter
