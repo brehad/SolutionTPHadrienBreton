@@ -11,19 +11,19 @@ void traiterRectangle(int choixRemplissage);
 
 void traiterCarre(int choixRemplissage);
 
-traiterTriangle;
+void traiterTriangle(int choixRemplissage);
 
 traiterLosange;
 
 void dessinerRectangle(int choixRemplissage, int hauteur, int largeur);
 
-dessinerTriangle1;
+void dessinerTriangle1(int choixRemplissage, int hauteur);
 
-dessinerTriangle2;
+void dessinerTriangle2(int choixRemplissage, int hauteur);
 
-dessinerTriangle3;
+void dessinerTriangle3(int choixRemplissage, int hauteur);
 
-dessinerTriangle4;
+void dessinerTriangle4(int choixRemplissage, int hauteur);
 
 dessinerLosange;
 

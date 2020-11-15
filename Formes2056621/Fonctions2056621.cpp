@@ -93,17 +93,54 @@ void traiterCarre(int choixRemplissage)							//Cette fonction est identique à l
 
 	if (choixRemplissage == 1)
 	{
-		cout << "Voici votre rectangle plein de " << longueur << "x" << longueur << ":\n";
+		cout << "Voici votre carré plein de " << longueur << "x" << longueur << ":\n";
 	}
 	if (choixRemplissage == 2)
 	{
-		cout << "Voici votre rectangle vide de " << longueur << "x" << longueur << ":\n";
+		cout << "Voici votre carré vide de " << longueur << "x" << longueur << ":\n";
 	}
 
 	dessinerRectangle(choixRemplissage, longueur, longueur);	//On utilise toujours la fonction dessinerRectagle pour dessiner le carré, mais on lui donne le même paramètre pour la hauteur et la largeur pour que tous les cotés soient égaux
 
 	system("pause");
 	system("cls");
+}
+
+void traiterTriangle(int choixRemplissage)
+{
+	int hauteur;
+
+	cout << "Veuillez entrer la hauteur du triangle:\n";
+	cin >> hauteur;
+
+	if (choixRemplissage == 1)
+	{
+		cout << "Voici votre triangle plein de hauteur " << hauteur << ":\n";
+	}
+	if (choixRemplissage == 2)
+	{
+		cout << "Voici votre triangle vide de hauteur " << hauteur << ":\n";
+	}
+
+	switch (genererNombreAleatoire(1,4))
+	{
+	case 1:
+		dessinerTriangle1(choixRemplissage, hauteur);
+		break;
+	case 2:
+		dessinerTriangle2();
+		break;
+	case 3:
+		dessinerTriangle3();
+		break;
+	case 4:
+		dessinerTriangle4();
+		break;
+	}
+
+	system("pause");
+	system("cls");
+
 }
 
 void dessinerRectangle(int choixRemplissage, int hauteur, int largeur)
@@ -134,6 +171,45 @@ void dessinerRectangle(int choixRemplissage, int hauteur, int largeur)
 		}
 
 		cout << largeur * contour << endl;
+	}
+}
+
+void dessinerTriangle1(int choixRemplissage, int hauteur)
+{
+	char contour = '*';
+	char remplissage = '#';
+	char vide = ' ';
+	int i = 1;
+
+
+	if (choixRemplissage == 1)
+	{
+		while (i <= hauteur)
+		{
+			if (i <= 2 || i == hauteur)
+			{
+				cout << i * contour << endl;
+			}
+			if (i > 2 && i < hauteur)
+			{
+				cout << contour << (i - 2) * remplissage << contour << endl;
+			}
+		}
+	}
+
+	if (choixRemplissage == 2)
+	{
+		while (i <= hauteur)
+		{
+			if (i <= 2 || i == hauteur)
+			{
+				cout << i * contour << endl;
+			}
+			if (i > 2 && i < hauteur)
+			{
+				cout << contour << (i - 2) * vide << contour << endl;
+			}
+		}
 	}
 }
 
