@@ -194,6 +194,7 @@ void dessinerTriangle1(int choixRemplissage, int hauteur)
 			{
 				cout << contour << (i - 2) * remplissage << contour << endl;
 			}
+			i++;
 		}
 	}
 
@@ -209,6 +210,48 @@ void dessinerTriangle1(int choixRemplissage, int hauteur)
 			{
 				cout << contour << (i - 2) * vide << contour << endl;
 			}
+			i++;
+		}
+	}
+}
+
+void dessinerTriangle2(int choixRemplissage, int hauteur)
+{
+	char contour = '*';
+	char remplissage = '#';
+	char vide = ' ';
+	int i = hauteur;
+
+
+	if (choixRemplissage == 1)
+	{
+		while (i >= 1)
+		{
+			if (i <= 2 || i == hauteur)
+			{
+				cout << i * contour << endl;
+			}
+			if (i > 2 && i < hauteur)
+			{
+				cout << contour << (i - 2) * remplissage << contour << endl;
+			}
+			i--;
+		}
+	}
+
+	if (choixRemplissage == 2)
+	{
+		while (i >= 1)
+		{
+			if (i <= 2 || i == hauteur)
+			{
+				cout << i * contour << endl;
+			}
+			if (i > 2 && i < hauteur)
+			{
+				cout << contour << (i - 2) * vide << contour << endl;
+			}
+			i--;
 		}
 	}
 }
