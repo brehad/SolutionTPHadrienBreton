@@ -17,14 +17,14 @@ traiterLosange;
 
 void dessinerRectangle(int choixRemplissage, int hauteur, int largeur);
 
-dessinerTriangle1
+dessinerTriangle1;
 
-dessinerTriangle2
+dessinerTriangle2;
 
-dessinerTriangle3
+dessinerTriangle3;
 
-dessinerTriangle4
+dessinerTriangle4;
 
-dessinerLosange
+dessinerLosange;
 
-genererNombreAleatoire
+int genererNombreAleatoire(int min, int max);

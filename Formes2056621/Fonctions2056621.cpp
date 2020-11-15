@@ -1,5 +1,6 @@
 #include "Fonctions2056621.h"
 #include <iostream>
+#include <ctime>
 using namespace std;
 
 void afficherMenu1()											//Affiche les options de forme
@@ -134,4 +135,9 @@ void dessinerRectangle(int choixRemplissage, int hauteur, int largeur)
 
 		cout << largeur * contour << endl;
 	}
+}
+
+int genererNombreAleatoire(int min, int max)
+{
+	return rand()% (max - min + 1) + min;
 }
