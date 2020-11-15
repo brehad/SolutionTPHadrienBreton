@@ -256,6 +256,49 @@ void dessinerTriangle2(int choixRemplissage, int hauteur)
 	}
 }
 
+void dessinerTriangle3(int choixRemplissage, int hauteur)
+{
+	char contour = '*';
+	char remplissage = '#';
+	char vide = ' ';
+	int i = hauteur;
+
+
+	if (choixRemplissage == 1)
+	{
+		while (i >= 1)
+		{
+			cout << (hauteur - i) * vide;
+			if (i <= 2 || i == hauteur)
+			{
+				cout << i * contour << endl;
+			}
+			if (i > 2 && i < hauteur)
+			{
+				cout << contour << (i - 2) * remplissage << contour << endl;
+			}
+			i--;
+		}
+	}
+
+	if (choixRemplissage == 2)
+	{
+		while (i >= 1)
+		{
+			cout << (hauteur - i) * vide;
+			if (i <= 2 || i == hauteur)
+			{
+				cout << i * contour << endl;
+			}
+			if (i > 2 && i < hauteur)
+			{
+				cout << contour << (i - 2) * vide << contour << endl;
+			}
+			i--;
+		}
+	}
+}
+
 int genererNombreAleatoire(int min, int max)
 {
 	return rand()% (max - min + 1) + min;
