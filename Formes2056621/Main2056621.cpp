@@ -1,6 +1,6 @@
 // But :	   Programme qui dessine des formes aux dimensions diverses, pleines ou vides, selon les choix que l'utilisateur fait dans les menus	   
-// Auteur :	   Karine Moreau
-// Date :      6 Octobre 2020
+// Auteur :	   Karine Moreau et Hadrien Breton. Certains passages du programmes ont été faits en classe.
+// Date :      6 Octobre 2020. Remis le 17 novembre 2020
 
 
 #include <iostream>		// Bibliothèque qui fournit des fonctions pour permettre la communication entre le programme et l'utilisateur

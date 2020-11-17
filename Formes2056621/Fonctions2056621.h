@@ -1,5 +1,6 @@
 #pragma once
 
+//Les commentaires pour les fonctions sont dans le fichier fonctions2056621.cpp
 
 void afficherMenu1();
 
